@@ -1,15 +1,72 @@
 ---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const pageTitle = "Home";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout pageTitle={pageTitle}>
+  <div class="box-border p-2 border-2 box text-center">
+    <h6>
+      <br />
+      Hallo Seitenbesucher, <br />
+      hier über diese Seite können Sie sich meine selbst erstellten Projekte ansehen.
+      <br /><br />
+      Um das Wissen für die Projekte zu bekommmen, verwendete ich verschiedene Seiten,
+      welche einem sehr helfen, um Projekte umzusetzen. <br />
+      Am meisten arbeite ichfür die Projekte mit HTML-Datein aber auch CSS wurde
+      verwendet um ein paar Styles anzuwenden.<br />
+      Java-Script wurde hier vorallem für den Taschenrechner verwendet. <br />
+      <br />
+    </h6>
+  </div>
+  <br />
+  <div class="box-border p-2 border-2 box">
+    <figure class="max-w-screen-xl center img">
+      <a href="../CV">
+        <img
+          class="h-auto max-w-full rounded-lg"
+          src="CV.png"
+          alt="image description"
+        /></a
+      >
+      <figcaption class="mt-2 text-sm text-center text-gray-500">
+        Lebenslauf
+      </figcaption>
+    </figure>
+  </div>
+  <br />
+  <div class="box-border p-2 border-2 box">
+    <figure class="max-w-screen-xl center img">
+      <a href="../TR"
+        ><img
+          class="h-auto max-w-full rounded-lg"
+          src="TR.png"
+          alt="image description"
+        /></a
+      >
+      <figcaption class="mt-2 text-sm text-center text-gray-500">
+        Taschenrechner
+      </figcaption>
+    </figure>
+  </div>
+  <br />
+  <div class="box-border p-2 border-2 box">
+    <figure class="max-w-screen-xl center img">
+      <a href="../clock">
+        <img
+          class="h-auto max-w-full rounded-lg"
+          src="clock.png"
+          alt="image description"
+        /></a
+      >
+      <figcaption class="mt-2 text-sm text-center text-gray-500">
+        Uhr
+      </figcaption>
+    </figure>
+  </div>
+  <style>
+    h6 {
+      text-align: center;
+    }
+  </style>
+</BaseLayout>
